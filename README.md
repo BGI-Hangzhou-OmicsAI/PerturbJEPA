@@ -81,6 +81,8 @@ LICENSE                   MIT license
 
 ## Installation and local data
 
+Dataset: [BGI-Hangzhou-OmicsAI/Parse10M on Hugging Face](https://huggingface.co/datasets/BGI-Hangzhou-OmicsAI/Parse10M). Download the data and configure the local data layout described below.
+
 The verified environment uses Python 3.12. Run commands from the repository root:
 
 ```bash

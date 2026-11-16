@@ -81,6 +81,8 @@ LICENSE                   MIT 许可证
 
 ## 安装与本地数据
 
+本项目使用的数据集：[Hugging Face · BGI-Hangzhou-OmicsAI/Parse10M](https://huggingface.co/datasets/BGI-Hangzhou-OmicsAI/Parse10M)。下载后，按下述目录结构配置本地数据。
+
 验证环境为 Python 3.12，在仓库根目录执行：
 
 ```bash
