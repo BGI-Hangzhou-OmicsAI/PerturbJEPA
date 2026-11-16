@@ -1,0 +1,11 @@
+# Versions used for the five reported experiments (Python 3.12).
+torch==2.7.1
+transformers==5.0.0
+accelerate==1.12.0
+numpy==2.4.6
+PyYAML==6.0.3
+geomloss==0.3.1
+swanlab==0.7.6
+huggingface-hub==1.3.5
+safetensors==0.7.0
+numba==0.65.1

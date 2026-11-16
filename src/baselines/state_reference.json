@@ -1,0 +1,6 @@
+{
+  "upstream_repository": "https://github.com/ArcInstitute/state.git",
+  "upstream_revision": "9bbfe78a434a55205e4de834e1ea99f85f7a3add",
+  "upstream_source_tree_sha256": "28cf4f3df532f580daf0b62f46ca2a9f5c0ec23dd4a897db1d1b74c79eddd72d",
+  "implementation": "STATE-style model and transformer adapted to full-gene Parse10M inputs and condition-ID embeddings. All four neural experiments are trained from scratch; no pretrained weights are used."
+}

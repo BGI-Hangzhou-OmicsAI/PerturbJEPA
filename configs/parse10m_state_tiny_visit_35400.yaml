@@ -1,0 +1,78 @@
+data:
+  dataset_root: ../data/parse10m/v1
+  protocol: drug_cell_type
+  fold: null
+  cells_per_group: 256
+  seed: 42
+  train_sampling:
+    mode: visit_decay
+    group_gamma: 1.0
+    group_uniform_probability: 0.02
+    group_deadline_multiplier: 10.0
+    cell_gamma: 1.0
+    cell_uniform_probability: 0.01
+model:
+  hidden_size: 104
+  intermediate_size: 416
+  num_hidden_layers: 2
+  num_attention_heads: 4
+  num_key_value_heads: 4
+  head_dim: 26
+  rms_norm_eps: 1.0e-06
+  attention_dropout: 0.0
+  hidden_dropout: 0.0
+  initializer_range: 0.02
+  energy_blur: 0.05
+  predict_residual: true
+  output_relu: true
+training:
+  output_dir: outputs/parse10m_state_tiny_visit_35400
+  run_name: parse10m_state_tiny_visit_35400
+  seed: 42
+  data_seed: 42
+  per_device_train_batch_size: 15
+  per_device_eval_batch_size: 15
+  gradient_accumulation_steps: 1
+  learning_rate: 0.0003
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  adam_epsilon: 1.0e-08
+  weight_decay: 0.0
+  max_grad_norm: 10.0
+  warmup_steps: 0
+  lr_scheduler_type: constant
+  bf16: false
+  fp16: false
+  tf32: true
+  logging_strategy: steps
+  logging_steps: 10
+  logging_nan_inf_filter: false
+  eval_strategy: steps
+  save_strategy: steps
+  save_total_limit: 3
+  load_best_model_at_end: true
+  metric_for_best_model: eval_retrieval_mrr
+  greater_is_better: true
+  prediction_loss_only: true
+  dataloader_num_workers: 4
+  dataloader_pin_memory: true
+  dataloader_persistent_workers: true
+  dataloader_prefetch_factor: 2
+  accelerator_config:
+    dispatch_batches: false
+    split_batches: false
+  disable_tqdm: true
+  max_steps: 35400
+  eval_steps: 354
+  save_steps: 354
+swanlab:
+  enabled: false
+  project: perturbjepa-parse10m
+  mode: offline
+retrieval:
+  enabled: true
+  candidate_scope: all_actions
+  cells_per_group: 256
+  seed: 20260930
+  candidate_batch_size: 2
+  bootstrap_replicates: 4000
