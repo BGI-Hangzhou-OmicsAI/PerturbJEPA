@@ -59,7 +59,6 @@ Each candidate predicts a mean point, scored with expression-space energy-MMD in
 
 - Parse10M v1, `drug_cell_type` combination holdout: held-out factor–cell-type combinations, with all candidate factors represented in training.
 - All 32,425 retained genes and 90 candidate cytokines; 256 PBS control cells and 256 treated cells per query.
-- Retrieval seed `20260930`; 667 validation queries and 664 test queries. All five runs use identical query, label and physical-cell artifacts, with zero failed evaluations.
 - Macro aggregation averages donors within each factor × cell type, then factors within a cell type, then cell types.
 - All four neural models train from scratch with seed `42`, batch size `15` and 35,400 optimizer steps. Validation and checkpointing occur every 354 steps. Validation macro MRR selects the model before the final test.
 - Loader comparisons control numerical settings within each model family. JEPA and STATE retain their respective loss, optimizer and precision settings. These are single-seed results; raw distance scales differ between representations.
