@@ -4,6 +4,8 @@
 
 本仓库提供 Parse10M 上五组实验的源码与配置：**PerturbJEPA Tiny visit/epoch、STATE Tiny visit/epoch，以及 Linear-additive Ridge**，包含训练、数据加载、预处理和检索实现。下面分别说明五组已完成实验。
 
+本仓库选用规模相对较小的 Parse10M 数据集和 Tiny 模型，帮助用户以较低计算成本快速复现完整流程。Tahoe100M 可参照类似的数据准备、训练和评估步骤，但需要进行相应的数据适配，并投入更多计算资源和更长运行时间。
+
 ## 模型结构
 
 ![PerturbJEPA 模型结构图](assets/model-architecture.png)

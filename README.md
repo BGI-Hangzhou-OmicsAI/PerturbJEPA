@@ -4,6 +4,8 @@
 
 Source code and configurations for five Parse10M experiments: **PerturbJEPA Tiny with visit/epoch loading, STATE Tiny with visit/epoch loading, and Linear-additive Ridge**. This repository contains the training, data loading, preprocessing and retrieval implementations. The five completed experiments are described below.
 
+The comparatively smaller Parse10M dataset and Tiny models help users reproduce the complete workflow quickly with lower computational costs. Tahoe100M can use a similar data preparation, training and evaluation workflow, with dataset-specific adaptation, more computational resources and longer runtimes.
+
 ## Model architecture
 
 ![PerturbJEPA model architecture](assets/model-architecture.png)
