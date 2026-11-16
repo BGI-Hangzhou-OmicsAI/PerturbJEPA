@@ -4,6 +4,12 @@
 
 本仓库提供 Parse10M 上五组实验的源码与配置：**PerturbJEPA Tiny visit/epoch、STATE Tiny visit/epoch，以及 Linear-additive Ridge**，包含训练、数据加载、预处理和检索实现。下面分别说明五组已完成实验。
 
+## 模型结构
+
+![PerturbJEPA 模型结构图](assets/model-architecture.png)
+
+模型包括群体预测、扰动效应保持和候选扰动排序三个部分。本文报告的 Parse10M 实验使用 condition ID 编码，图中的剂量分支未启用。
+
 ## 实验结果
 
 全部指标为宏平均，越高越好。MRR 衡量正确扰动因子的倒数排名；Recall@K 表示正确因子进入前 K 名的比例。
@@ -69,6 +75,7 @@ visit 共消费 531,000 组群体配对；epoch 每轮末批为 12 组，合计 
 
 ```text
 configs/                  四组神经网络实验配置
+assets/                   模型结构图
 src/perturbjepa/           JEPA 模型、训练、选模与检索
 src/baselines/             STATE 和 Linear 基线
 src/data/                  CSR 存储、epoch 采样和 visit 加载

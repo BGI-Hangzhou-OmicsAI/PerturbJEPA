@@ -4,6 +4,12 @@
 
 Source code and configurations for five Parse10M experiments: **PerturbJEPA Tiny with visit/epoch loading, STATE Tiny with visit/epoch loading, and Linear-additive Ridge**. This repository contains the training, data loading, preprocessing and retrieval implementations. The five completed experiments are described below.
 
+## Model architecture
+
+![PerturbJEPA model architecture](assets/model-architecture.png)
+
+Population prediction, effect preservation, and intervention-discriminative ranking. The reported Parse10M experiments use condition-ID embeddings; the dose branch shown here is disabled.
+
 ## Results
 
 All metrics are macro averages; higher is better. MRR is the mean reciprocal rank of the correct perturbation. Recall@K measures whether it appears among the top K candidates.
@@ -69,6 +75,7 @@ Visit consumes 531,000 population pairs. Epoch consumes 530,700 because each epo
 
 ```text
 configs/                  Four neural experiment configurations
+assets/                   Model architecture figure
 src/perturbjepa/           JEPA model, training, checkpoint selection and retrieval
 src/baselines/             STATE and Linear baselines
 src/data/                  CSR storage, epoch sampling and visit loading

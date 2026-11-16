@@ -1,4 +1,4 @@
-# Publish only the source package and the four experiment recipes.
+# Publish the source package, experiment recipes and README figure.
 /*
 !/.gitignore
 !/.gitattributes
@@ -8,6 +8,10 @@
 !/requirements-train.txt
 !/configs/
 !/src/
+!/assets/
+
+/assets/*
+!/assets/model-architecture.png
 
 /configs/*
 !/configs/parse10m_tiny_visit_35400.yaml
